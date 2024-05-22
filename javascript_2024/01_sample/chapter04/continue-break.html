@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		"use strict";
+		window.onload = function() {
+			var numA = 0;
+			var numB = 0;
+
+			console.log("ここからcontinueのテスト");
+
+			while(numA < 6){
+				numA = numA + 1;
+
+				if(numA % 2 == 0){
+					continue;
+				}
+
+				console.log(numA);
+			}
+
+			console.log("ここからbreakのテスト");
+
+			while(numB < 5){
+				numB++;
+
+				if(numB >= 3){
+					break;
+				}
+
+				console.log(numB);
+			}
+		};
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>

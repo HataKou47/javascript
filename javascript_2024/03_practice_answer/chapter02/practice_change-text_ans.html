@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>あいさつ</title>
+	<script>
+		window.onload = function() {
+			document.getElementById("greeting").innerHTML = "<h1>GREETING</h1>";
+			document.getElementsByClassName("design")[1].textContent = "<p>こんばんは。</p>";
+			document.getElementById("memo").textContent = "";
+		};
+	</script>
+</head>
+<body>
+	<div id="greeting" class="design">
+		<h1>あいさつ</h1>
+	</div>
+	<div class="design">
+		<p>おはようございます。</p>
+		<p>こんにちは。</p>
+	</div>
+	<div id="memo">
+		日常会話。
+	</div>
+</body>
+</html>

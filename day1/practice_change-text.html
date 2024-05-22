@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>あいさつ</title>
+	<script>
+		function set_en() {
+			document.getElementById("greeting").innerHTML = "<h1>GREETING</h1>";
+			document.getElementsByClassName("design")[1].textContent = "<p>こんばんは</p>";
+			document.getElementById("memo").textContent = "";
+		};
+		function set_ja() {
+			document.getElementById("greeting").innerHTML = "<h1>あいさつ</h1>";
+			document.getElementsByClassName("design")[1].innerHTML = "<p>おはようございます。</p><p>こんにちは。</p>";
+			document.getElementById("memo").textContent = "日常会話。";			
+		};
+	</script>
+</head>
+<body>
+	<div id="greeting" class="design">
+		<h1>あいさつ</h1>
+	</div>
+	<div class="design">
+		<p>おはようございます。</p>
+		<p>こんにちは。</p>
+	</div>
+	<div id="memo">
+		日常会話。
+	</div>
+	<button onclick="set_en()">英語へ</button>
+	<button onclick="set_ja()">日本語へ</button>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		"use strict";
+		window.onload = function() {
+			/* 宣言と初期化 */
+			var recordHash = {"国語":80, "数学":100, "理科":90};
+			var key = "国語";
+
+			/* 宣言のみ */
+			var mountainHash = {};
+
+			/* 初期化 */
+			mountainHash["ABC"] = "富士山";
+			mountainHash["あいう"] = "赤城山";
+			mountainHash["123"] = "大山";
+
+			/* 表示 */
+			console.log(recordHash);
+			console.log(recordHash["国語"]);
+			console.log(recordHash[key]);
+
+			console.log(mountainHash);
+			console.log(mountainHash["ABC"]);
+			console.log(mountainHash["あいう"]);
+			console.log(mountainHash["123"]);
+		};
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>

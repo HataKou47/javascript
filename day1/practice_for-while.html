@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>演習</title>
+	<script>
+		"use strict";
+		window.onload = function() {
+			var fruitArray = ["ぶどう", "みかん", "いちご"];
+			var j = 0;	//while用のカウンタ変数
+
+			/* for文で出力 */
+			console.log("for文で出力");
+			for (var i in fruitArray){
+				console.log(fruitArray[i]);
+			}
+
+			/* while文で出力 */
+			console.log("while文で出力");
+			while (j < fruitArray.length){
+				console.log(fruitArray[j])
+				j++;
+			}
+
+		};
+	</script>
+</head>
+<body>
+	<h1>演習</h1>
+</body>
+</html>

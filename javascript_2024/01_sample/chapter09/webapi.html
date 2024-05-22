@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		"use strict";
+		window.onload = function(){
+			var request = new XMLHttpRequest();
+
+			request.open("GET", "https://jsonplaceholder.typicode.com/users/1", true);
+			request.responseType = "json";
+
+			request.onload = function () {
+				console.log(request.response);
+			};
+
+			request.send();
+		}
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>

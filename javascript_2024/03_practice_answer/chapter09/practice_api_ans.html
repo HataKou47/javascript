@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>郵便番号から該当地域を検索する</title>
+	<script>
+		"use strict";
+		function zipsearch() {
+			var request = new XMLHttpRequest();
+			var zipcode = document.getElementById("zip").value.trim();
+			var api = "https://zipcloud.ibsnet.co.jp/api/search?zipcode=" + zipcode;
+
+			request.open("GET", api, true);
+			request.responseType = "json";
+
+			request.onload = function(){
+				var objData = request.response.results[0];
+
+				document.getElementById("address1").textContent = objData.address1;
+				document.getElementById("address2").textContent = objData.address2;
+				document.getElementById("address3").textContent = objData.address3;
+			}
+
+			request.send();
+		}
+	</script>
+</head>
+<body>
+	<h1>郵便番号から該当地域を検索する</h1>
+	<p>郵便番号：<input type="text" id="zip" value="" /> ※入力例 : 1010047 (半角数字7桁)</p>
+	<p><input type="button" value="検索" onClick="zipsearch();" /></p>
+	<hr>
+	<p>住所1 : <span id="address1"></span></p>
+	<p>住所2 : <span id="address2"></span></p>
+	<p>住所3 : <span id="address3"></span></p>
+</body>
+</html>

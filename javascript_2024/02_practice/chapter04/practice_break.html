@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>演習</title>
+	<script>
+		"use strict";
+		window.onload = function() {
+			var numA = 0;
+
+			for(var i = 0; i < 1000; i++){
+				if(numA > 3){
+					break;
+				}
+				numA = numA + 1;
+			}
+
+			for(var i = 0; i < 1000; i++){
+				if(numA % 2 == 1){
+					break;
+				}
+				numA = numA + 1;
+			}
+
+			console.log(numA);
+		};
+	</script>
+</head>
+<body>
+	<h1>演習</h1>
+</body>
+</html>

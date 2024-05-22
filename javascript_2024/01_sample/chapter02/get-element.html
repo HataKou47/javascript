@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		window.onload = function() {
+			console.log(document.getElementById("greeting"));
+			console.log(document.getElementsByTagName("div")[0]);
+			console.log(document.getElementsByClassName("design")[0]);
+
+			console.log(document.getElementById("comment"));
+			console.log(document.getElementsByTagName("div")[1]);
+			console.log(document.getElementsByClassName("design")[1]);
+		};
+	</script>
+</head>
+<body>
+	<div id="greeting" class="design">
+		<h1>あいさつ</h1>
+	</div>
+	<div id="comment" class="design">
+		<p>おはようございます。</p>
+	</div>
+</body>
+</html>

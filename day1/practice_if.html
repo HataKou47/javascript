@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>演習</title>
+	<script>
+		"use strict";
+		const check_if = () => {
+			var numA = Number(document.getElementById("num").value);
+
+			if (numA < 10){
+				console.log(numA);
+			}
+
+			if (numA % 2 == 0){
+				console.log("偶数");
+			}else{
+				console.log("奇数");
+			}
+
+			if (numA % 15 == 0){
+				console.log("FizzBuzz");
+			}else if (numA % 3 == 0) {
+				console.log("Fizz");
+			}else if (numA % 5 == 0) {
+				console.log("Buzz");
+			}
+
+			console.log("Finish...")
+		};
+	</script>
+</head>
+<body>
+	<h1>演習</h1>
+	<input type="number" id="num">
+	<button onclick="check_if()">Push</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>演習</title>
+	<script>
+		"use strict";
+		window.onload = function(){
+			var price = 100;   //価格
+			var amount = 15;   //数量
+			var result;        //計算結果
+
+			//関数に 価格 と 数量 を渡し、「価格×数量」の計算結果を受け取る
+			result = culculate(price, amount);
+
+			//結果をHTMLに表示する
+			document.getElementById("output").textContent = result + "円";
+		}
+
+		//「価格×数量」を計算し、結果を返す関数
+		function culculate(price, amount){
+			return price * amount;
+		}
+
+	</script>
+</head>
+<body>
+	<h1>計算結果</h1>
+	<p id="output">ここに結果を表示する</p>
+</body>
+</html>

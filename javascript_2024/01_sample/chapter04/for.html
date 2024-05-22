@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		"use strict";
+		window.onload = function() {
+			var numA = 10;
+			var prifArray = ["東京", "大阪", "名古屋"];
+			var i;
+
+			for(i = 0; i < 3; i++){
+				console.log(i + "：" + prifArray[i]);
+			}
+
+			console.log("ここから次のfor");
+
+			for(i = 5; i >= 0; i--){
+				numA = numA + 8;
+				console.log(i + "：" + numA);
+			}
+		};
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>

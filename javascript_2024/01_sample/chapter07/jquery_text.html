@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			/* 要素の取得 */
+			var strA = $("#title");
+			var strB = $("h2");
+			var strC = $(".txt01");
+
+			/* 要素内の文字情報の参照 */
+			console.log(strA.text());
+			console.log(strB.text());
+			console.log(strC.text());
+
+			/* 要素内の文字情報の参照 */
+			console.log($("#title").text());
+			console.log($("h2").text());
+			console.log($(".txt01").text());
+
+			/* 要素内の文字情報の変更 */
+			strA.text("私のページ");
+			strB.text("自己紹介");
+			strC.text("はじめまして、春山一郎です。");
+		});
+	</script>
+</head>
+<body>
+	<h1 id="title">タイトル</h1>
+	<h2>見出し</h2>
+	<p class="txt01">あいさつ文</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>私のページ</title>
+	<script>
+		function print() {
+			console.log(document.getElementsByClassName("contents")[1].textContent)
+			console.log(document.getElementsByClassName("text01")[1].textContent)
+			console.log(document.getElementById("contents").innerHTML)
+		};
+	</script>
+</head>
+<body>
+	<div id="contents" class="contents">
+		<h1 class="contents">自己紹介</h1>
+		<p class="text01">はじめまして、春山一郎です。</p>
+		<p class="text01">好きな食べ物は、桜餅です。</p>
+		<p class="text01">よろしくお願いいたします。</p>
+		<button onclick="print()">hello?</button>
+	</div>
+</body>
+</html>

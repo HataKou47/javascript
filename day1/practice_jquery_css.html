@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var strA = $("#title")
+			var strB = $("h2")
+			var strC = $(".txt01")
+
+			strA.css("color", "red")
+			strB.css({
+				"color":"orange",
+				"font-size":"200px",
+				"font-weight":"bold",
+				"border":"green 2px solid"
+			})
+			strC.css({"color":"blue"})
+
+		});
+	</script>
+</head>
+<body>
+	<h1 id="title">タイトル</h1>
+	<h2>見出し</h2>
+	<p class="txt01">あいさつ文</p>
+</body>
+</html>

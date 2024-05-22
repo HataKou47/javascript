@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		window.onload = function() {
+			console.log(document.getElementById("title").className);
+			console.log(document.getElementById("title").tagName);
+			console.log(document.getElementsByClassName("text01")[0].id);
+
+			console.log(document.getElementById("login").type);
+			console.log(document.getElementById("login").name);
+			console.log(document.getElementById("login").value);
+		};
+	</script>
+</head>
+<body>
+	<div id="contents">
+		<h1 id="title" class="text01"><span>ログイン</span></h1>
+		<p>ログイン名：<input id="login" type="text" name="userName" value=""></p>
+	</div>
+</body>
+</html>

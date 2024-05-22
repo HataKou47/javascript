@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>演習</title>
+	<script>
+		"use strict";
+		window.onload = function() {
+			var fruitArray = ["ぶどう", "みかん", "いちご"];
+			var strTable = "<table border='1'>";
+
+			strTable = strTable +  "<tr><th>品名</th></tr>";
+
+			for(var i = 0; i < 3; i++){
+				strTable = strTable +  "<tr><td>" + fruitArray[i] + "</td></tr>";
+			}
+			strTable = strTable +  "</table>";
+
+			document.getElementById("contents").innerHTML = strTable;
+		};
+	</script>
+</head>
+<body>
+	<div id="contents">
+		ここに表を出力
+	</div>
+</body>
+</html>

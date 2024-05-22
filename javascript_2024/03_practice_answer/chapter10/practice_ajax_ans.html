@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<title>データ取得＆出力</title>
+	<script>
+		"use strict";
+		function getData(){
+			var request = new XMLHttpRequest();
+			var userCode = document.getElementById("userCode").value;
+			var dataUrl = "https://jsonplaceholder.typicode.com/users/" + userCode;
+
+			request.open("GET", dataUrl, true);
+			request.responseType = "json";
+
+			request.onreadystatechange = function(){
+				//通信の状態が変わると呼び出される
+				if (request.readyState == 4){
+					//レスポンス全体を受信済の場合
+					if (request.status == 200){
+						//レスポンスの取得に成功した場合
+						console.log(request.response); //受信したデータをコンソールに出力
+					} else if (request.status == 404){
+						//要求するページ（データ）が存在しない場合
+						console.log("データが存在しません。"); //メッセージをコンソールに出力
+					}
+				}
+			};
+
+			request.send();
+		}
+	</script>
+</head>
+<body>
+	<h1>データ取得＆出力</h1>
+	<form> ユーザーコード： <select id="userCode">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="1000">存在しないコード</option>
+		</select>
+		<br>
+		<input type="button" value="実行" onClick="getData()">
+	</form>
+</body>
+</html>

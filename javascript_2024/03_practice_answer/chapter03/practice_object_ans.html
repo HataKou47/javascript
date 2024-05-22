@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>演習</title>
+	<script>
+		window.onload = function() {
+			var element01 = document.getElementById("title");
+			console.log(element01.className);
+			console.log(element01.innerHTML);
+			element01.textContent = "あいさつ";
+
+			var element02 = document.getElementsByTagName("p")[1];
+			console.log(element02.className);
+			console.log(element02.textContent);
+			element02.textContent = "好きな食べ物は、カレーです。";
+		};
+	</script>
+</head>
+<body>
+	<h1 id="title" class="txt01">自己紹介</h1>
+	<p class="txt02">はじめまして、春山一郎です。</p>
+	<p class="txt03">好きな食べ物は、桜餅です。</p>
+	<p class="txt04">よろしくお願いいたします。</p>
+</body>
+</html>

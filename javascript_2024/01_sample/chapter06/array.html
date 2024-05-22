@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		"use strict";
+		window.onload = function(){
+			var cityA = new Array("札幌","仙台","東京");
+			var cityB = ["名古屋","福岡","沖縄"];
+			
+			/* 配列の要素数を取得 */
+			console.log(cityA.length);
+
+			/* 配列の末尾に要素を追加し、要素数を返す */
+			console.log(cityA.push("横浜"));
+
+			/* 配列の末尾の要素を削除し、削除した要素を返す */
+			console.log(cityA.pop());
+
+			/* 配列の先頭の要素を削除し、削除した要素を返す */
+			console.log(cityB.shift());
+
+			/* 配列に他の配列を連結し、連結後の配列を返す */
+			console.log(cityA.concat(cityB));
+		}
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>演習</title>
+	<script>
+		"use strict";
+
+		//「価格×数量」を計算し、結果を返す関数
+		function culculate(price, amount){
+			return price * amount
+		}
+
+		function display_oturi(result){
+			var moneys = [10000, 5000, 1000, 500, 100, 50, 10, 5, 1]
+			var oturi_dict = {}
+			for (var i in moneys){
+				if (Math.floor(result / moneys[i]) > 0){
+					oturi_dict[moneys[i]] = Math.floor(result / moneys[i])
+					result = result - moneys[i] * Math.floor(result / moneys[i])
+				} 
+			}
+
+			var texts = ""
+			for (var i in oturi_dict){
+				texts = texts + "," + i + "円：" + oturi_dict[i] + "ツ"  
+			}
+			document.getElementById("oturi").textContent = texts
+
+		}
+
+		const calc_fee = () => {
+			var price = Number(document.getElementById("price").value);
+			var amount = Number(document.getElementById("amount").value);
+			var result;
+
+			//関数に価格と数を渡し、「価格×数量」を計算した結果を受け取る
+			result = culculate(price, amount);
+
+			//結果をHTMLに表示する
+			document.getElementById("output").textContent = result;
+
+			display_oturi(result);
+		}
+	</script>
+</head>
+<body>
+	<h1>計算結果</h1>
+	<p id="output">ここに結果を表示する</p>
+	<p id="oturi"></p>
+	値段<input type="number" id="price">
+	数量<input type="number" id="amount">
+	<button onclick="calc_fee()">Push</button>
+</body>
+</html>

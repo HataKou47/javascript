@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>私のページ</title>
+	<script>
+		window.onload = function() {
+			/* id名がcontentsの要素を全て出力 */
+			console.log(document.getElementById("contents"));
+
+			/* class名がcontentsの要素を全て出力 */
+			console.log(document.getElementsByClassName("contents")[0]);
+			console.log(document.getElementsByClassName("contents")[1]);
+
+			/* タグ名がpの要素を全て出力 */
+			console.log(document.getElementsByTagName("p")[0]);
+			console.log(document.getElementsByTagName("p")[1]);
+			console.log(document.getElementsByTagName("p")[2]);
+		};
+	</script>
+</head>
+<body>
+	<div id="contents" class="contents">
+		<h1 class="contents">自己紹介</h1>
+		<p class="text01">はじめまして、春山一郎です。</p>
+		<p class="text01">好きな食べ物は、桜餅です。</p>
+		<p class="text01">よろしくお願いいたします。</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		"use strict";
+		window.onload = function(){
+			var strA = new String("あいうえお");
+			var strB = new String("　AaBbCc "); //toUpperCase()、toLowerCase()、trim()の確認用
+			
+			/* 文字列の長さを取得 */
+			console.log(strA.length);
+
+			/* 文字列から、指定位置の１文字を抽出して返す */
+			console.log(strA.charAt(3));
+
+			/* 文字列から、開始位置から指定した文字数分までの文字列を抽出して返す */
+			console.log(strA.substr(2, 3));
+
+			/* 文字列内を「検索文字列」で検索し、一致箇所を「置換文字列」に置換して返す */
+			console.log(strA.replace("うえお", "マスク"));
+
+			/* 文字列の内の英字を、全て大文字に変換して返す */
+			console.log(strB.toUpperCase());
+
+			/* 文字列の内の英字を、全て小文字に変換して返す */
+			console.log(strB.toLowerCase());
+
+			/* 文字列の前後の空白（半角・全角スペース、タブ）を除去して返す */
+			console.log(strB.trim());
+		}
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>サンプル</title>
+	<script>
+		"use strict";
+		window.onload = function(){
+			//データを記録
+			var fruit = {
+				"ぶどう" : 500,
+				"みかん" : 120,
+				"いちご" : 1000
+			}
+			//データを出力
+			console.log(fruit);
+
+
+			//データをJSON文字列へ変換
+			var fruitJson = JSON.stringify(fruit);
+
+			//データを出力
+			console.log(fruitJson);
+
+
+			//データをJSON文字列からオブエクト（連想配列）へ変換
+			var fruitObj = JSON.parse(fruitJson);
+
+			//データを出力
+			console.log(fruitObj);
+		}
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>

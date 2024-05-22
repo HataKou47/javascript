@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リアルタイム時計</title>
+    <style>
+        /* スタイルを適用する場合はここに追加 */
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+
+    <script>
+        function showCurrentTime() {
+            const now = new Date();
+            const hour = now.getHours();
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+            const formattedTime = `${hour}:${minute}:${second}`;
+            document.getElementById("clock").textContent = formattedTime;
+        }
+
+        // 1秒ごとに時刻を更新
+        setInterval(showCurrentTime, 1000);
+    </script>
+</body>
+</html>

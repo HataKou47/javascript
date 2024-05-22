@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>振り返り</title>
+	<script>
+		"use strict";
+		window.onload = function(){
+			/* ----------------------------------
+			* JSON形式の「配列」
+			* -------------------------------- */
+			//データを記録
+			var goods = ["消しゴム", "鉛筆", "定規"];
+			var price = [100, 80, 250];
+
+			//データをJSON文字列へ変換
+			var goodsJson = JSON.stringify(goods);
+			var priceJson = JSON.stringify(price);
+
+			//データを出力
+			console.log(goodsJson);
+			console.log(priceJson);
+
+			/* ----------------------------------
+			* JSON形式の「連想配列」
+			* -------------------------------- */
+			//データを記録
+			var dataHash = {
+				"消しゴム": 100,
+				"鉛筆": 80,
+				"定規": 250
+			}
+
+			//データをJSON文字列へ変換
+			var dataHashJson = JSON.stringify(dataHash);
+
+			//データを出力
+			console.log(dataHashJson);
+
+			/* ----------------------------------
+			* JSON形式の「配列形式の連想配列」
+			* -------------------------------- */
+			//データを記録
+			var dataArray = [
+				{
+					"goods": "消しゴム",
+					"price": 100
+				},
+				{
+					"goods": "鉛筆",
+					"price": 80
+				},
+				{
+					"goods": "定規",
+					"price": 250
+				}
+			]
+
+			//データをJSON文字列へ変換
+			var dataArrayJson = JSON.stringify(dataArray);
+
+			//データを出力
+			console.log(dataArrayJson);
+		}
+	</script>
+</head>
+<body>
+	<h1>サンプル</h1>
+</body>
+</html>
